@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación 15 Años - Dana Camila</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #0a0f2c, #1a237e);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .highlight {
+      font-size: 1.3em;
+      margin: 15px 0;
+    }
+
+    .dresscode {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <div class="container">
+    <h2>Bajo un cielo lleno de estrellas...</h2>
+    <h1>Dana Camila Barrera Ávila</h1>
+
+    <div class="card">
+      <p class="highlight">Te invita a celebrar sus 15 años</p>
+      <p class="highlight">📅 1 de agosto de 2026</p>
+      <p class="highlight">🕖 7:00 PM</p>
+      <p class="highlight">🌌 Temática: Noche Estrellada</p>
+
+      <div class="dresscode">
+        <strong>👗 Código de vestimenta:</strong>
+        <p>Formal (caballeros y damas)</p>
+        <p><strong>Evitar color azul oscuro</strong></p>
+      </div>
+    </div>
+
+    <p>✨ Una noche mágica te espera ✨</p>
+
+    <footer>
+      ¡Te esperamos!
+    </footer>
+  </div>
+</body>
+</html>
