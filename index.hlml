@@ -1,234 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mis 15 Años - DANNA CAMILA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis 15 Años - DANNA CAMILA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-body {
-  background-image: url('noche-estrellada.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  <style>
+    :root {
+      --overlay: rgba(0,0,0,.55);
+      --gold: #f5d21e;
+    }
 
-/* PORTADA */
-<section class="hero">
-  <div class="overlay"></div>
+    * { box-sizing: border-box; }
 
-  <div class="hero-content">
-    <h2 class="brush">Mis 15 Años</h2>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background: #0a0f1a;
+    }
 
-    <h1 class="paint">
-      DANNA CAMILA
-    </h1>
+    /* PORTADA / HERO */
+    .hero {
+      position: relative;
+      height: 90vh;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Starry_Night.JPG');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
 
-    <p class="sub">BARRERA AVILA</p>
-  </div>
-</section> 
+    /* Sutil overlay para mejorar legibilidad */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+      pointer-events: none;
+    }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      max-width: 90%;
+    }
 
-.hero {
-  height: 100vh;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Starry_Night.JPG') no-repeat center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+    .brush-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--gold);
+      text-shadow: 2px 2px 0 #000, 4px 4px 12px rgba(0,0,0,.8);
+      margin: 0 0 8px;
+    }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-}
+    .main-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      letter-spacing: 2px;
+      margin: 8px 0 6px;
+      color: #fff;
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-}
+    .sub-name {
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      color: #f0f0f0;
+      opacity: .95;
+    }
 
-/* TEXTO PINCEL */
-.brush {
-  font-size: 3em;
-  color: gold;
-  font-family: 'Playfair Display', serif;
-}
+    /* Título con efecto de pincel (simulado) */
+    .paint {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 3rem;
+      color: #ffd86b;
+      border-right: 3px solid #ffd86b;
+      white-space: nowrap;
+      width: 0;
+      overflow: hidden;
+      animation: escribir 4s steps(30) forwards, parpadeo 0.7s infinite;
+    }
 
-/* EFECTO ESCRITURA (PINCEL) */
-.paint {
-  font-size: 3em;
-  letter-spacing: 3px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid gold;
-  width: 0;
-  margin: auto;
-  animation: escribir 4s steps(30) forwards, parpadeo 0.7s infinite;
-}
+    @keyframes escribir {
+      to { width: 100%; }
+    }
 
-/* SUBTEXTO */
-.sub {
-  letter-spacing: 5px;
-  margin-top: 10px;
-}
+    @keyframes parpadeo {
+      50% { border-color: transparent; }
+    }
 
-/* ANIMACIONES */
-@keyframes escribir {
-  from { width: 0 }
-  to { width: 100% }
-}
+    /* CONTENIDO */
+    .card {
+      padding: 40px 20px;
+      background: radial-gradient(circle at top, #02101e 0%, #000 60%);
+      color: #e8e8e8;
+    }
 
-@keyframes parpadeo {
-  50% { border-color: transparent }
-} 
-@keyframes zoomBg {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
-} 
+    .btn {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 22px;
+      background: var(--gold);
+      color: #000;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+    }
 
-.brush-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5em;
-  color: #facc15;
-  text-shadow:
-    2px 2px 0 #000,
-    4px 4px 10px rgba(255,215,0,0.8),
-    0 0 25px rgba(255,215,0,0.6);
-  animation: paint 2s ease;
-}
+    .countdown {
+      font-size: 1.4em;
+      margin-top: 12px;
+      color: #ffd;
+    }
 
-@keyframes paint {
-  from {
-    opacity: 0;
-    transform: scale(0.8) rotate(-5deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0);
-  }
-} 
-
-.big15 {
-  font-size: 2em;
-  text-shadow: 0 0 15px gold;
-}
-
-.main-name {
-  font-size: 3em;
-  letter-spacing: 3px;
-}
-
-.sub-name {
-  letter-spacing: 5px;
-}
-
-/* TARJETA */
-.card {
-  padding: 40px 20px;
-  background: radial-gradient(circle at top, #020617, #000);
-}
-
-/* BOTÓN */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: gold;
-  color: black;
-  text-decoration: none;
-  border-radius: 25px;
-}
-
-/* CONTADOR */
-.countdown {
-  font-size: 1.5em;
-  margin-top: 20px;
-}
-</style>
+    @media (max-width: 768px) {
+      .brush-title { font-size: 2.4rem; }
+      .main-name { font-size: 3rem; }
+      .overlay { background: rgba(0,0,0,.6); }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- PORTADA -->
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h2 class="brush-title">Mis <span class="big15">15</span> Años</h2>
-    <h1 class="main-name">DANNA CAMILA</h1>
-    <p class="sub-name">BARRERA AVILA</p>
-  </div>
-</section>
+  <!-- PORTADA / HERO -->
+  <section class="hero" aria-label="Portada de la invitación">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2 class="brush-title">Mis <span style="color:var(--gold);">15</span> Años</h2>
+      <h1 class="main-name">DANNA CAMILA</h1>
+      <p class="sub-name">BARRERA AVILA</p>
+    </div>
+  </section>
 
-<!-- CONTENIDO -->
-<div class="card">
+  <!-- CONTENIDO -->
+  <section class="card" aria-label="Detalles de la invitación">
+    <p>📅 1 de agosto de 2026</p>
+    <p>🕖 7:00 PM</p>
 
-<p>📅 1 de agosto de 2026</p>
-<p>🕖 7:00 PM</p>
+    <p style="margin-top:15px;">
+      Bajo una noche llena de estrellas, queremos celebrar esta fecha tan especial contigo.<br><br>
+      Tenemos el honor de invitarte a la celebración de los 15 años de<br>
+      <strong>DANNA CAMILA BARRERA AVILA</strong>
+    </p>
 
-<p style="margin-top:15px;">
-Bajo una noche llena de estrellas, queremos celebrar esta fecha tan especial contigo.<br><br>
-Tenemos el honor de invitarte a la celebración de los 15 años de<br>
-<strong>DANNA CAMILA BARRERA AVILA</strong>
-</p>
+    <p>
+      👗 Dress Code:<br>
+      Formal elegante (damas y caballeros)<br>
+      🚫 Evitar color azul oscuro
+    </p>
 
-<p>
-👗 Dress Code:<br>
-Formal elegante (damas y caballeros)<br>
-🚫 Evitar color azul oscuro
-</p>
+    <p style="margin-top:20px; font-style:italic;">
+      ✨ Tu presencia hará esta noche aún más especial ✨
+    </p>
 
-<p style="margin-top:20px; font-style:italic;">
-✨ Tu presencia hará esta noche aún más especial ✨
-</p>
+    <div class="countdown" id="countdown"></div>
 
-<div class="countdown" id="countdown"></div>
+    <a class="btn" href="https://wa.me/573223371728" target="_blank" rel="noopener">Confirmar asistencia</a>
 
-<a class="btn" href="https://wa.me/573223371728">Confirmar asistencia</a>
+    <br><br>
 
-<br><br>
+    <button class="btn" onclick="playMusic()">🎵 Activar música</button>
 
-<button class="btn" onclick="playMusic()">🎵 Activar música</button>
+    <audio id="music" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+    </audio>
+  </section>
 
-<audio id="music" loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
-</audio>
+  <script>
+    // Contador hacia la fecha de la fiesta
+    const countDownDate = new Date("Aug 1, 2026 19:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
 
-</div>
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
 
-<script>
-var countDownDate = new Date("Aug 1, 2026 19:00:00").getTime();
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
+      countdownEl.innerHTML =
+        days + " días " + hours + "h " + minutes + "m " + seconds + "s ";
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (distance < 0) {
+        clearInterval(x);
+        countdownEl.innerHTML = "La fiesta ha comenzado";
+      }
+    }, 1000);
 
-  document.getElementById("countdown").innerHTML =
-  days + " días " + hours + "h " + minutes + "m " + seconds + "s ";
-
-}, 1000);
-
-function playMusic() {
-  document.getElementById("music").play();
-}
-</script>
-
+    function playMusic() {
+      const audio = document.getElementById("music");
+      audio.play().catch(() => {
+        // Si no se puede reproducir automáticamente, pedir interacción
+        alert("Haz clic en el botón de reproducción para escuchar la música.");
+      });
+    }
+  </script>
 </body>
-</html> 
+</html>
