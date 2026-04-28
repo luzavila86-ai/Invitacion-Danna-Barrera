@@ -1,210 +1,86 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mis 15 Años - DANNA CAMILA</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV - Dana Camila</title>
   <style>
-    :root {
-      --overlay: rgba(0,0,0,.55);
-      --gold: #f5d21e;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-      background: #0a0f1a;
-    }
-
-    /* PORTADA / HERO */
-    .hero {
-      position: relative;
-      height: 90vh;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
       text-align: center;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Starry_Night.JPG');
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('noche-estrellada.jpg');
       background-size: cover;
       background-position: center;
-      overflow: hidden;
-    }
+      background-repeat: no-repeat;
+    }.overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 20px;
+}
 
-    /* Sutil overlay para mejorar legibilidad */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: var(--overlay);
-      pointer-events: none;
-    }
+h1 {
+  font-size: 3em;
+  margin: 10px 0;
+  overflow: hidden;
+  border-right: .15em solid #fff;
+  white-space: nowrap;
+  animation: typing 4s steps(30, end), blink .75s step-end infinite;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-      max-width: 90%;
-    }
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 
-    .brush-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: var(--gold);
-      text-shadow: 2px 2px 0 #000, 4px 4px 12px rgba(0,0,0,.8);
-      margin: 0 0 8px;
-    }
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
 
-    .main-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
-      letter-spacing: 2px;
-      margin: 8px 0 6px;
-      color: #fff;
-    }
+.ubicacion {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
 
-    .sub-name {
-      font-size: 1.4rem;
-      letter-spacing: 4px;
-      color: #f0f0f0;
-      opacity: .95;
-    }
+.btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
 
-    /* Título con efecto de pincel (simulado) */
-    .paint {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 3rem;
-      color: #ffd86b;
-      border-right: 3px solid #ffd86b;
-      white-space: nowrap;
-      width: 0;
-      overflow: hidden;
-      animation: escribir 4s steps(30) forwards, parpadeo 0.7s infinite;
-    }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-    @keyframes escribir {
-      to { width: 100%; }
-    }
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
 
-    @keyframes parpadeo {
-      50% { border-color: transparent; }
-    }
-
-    /* CONTENIDO */
-    .card {
-      padding: 40px 20px;
-      background: radial-gradient(circle at top, #02101e 0%, #000 60%);
-      color: #e8e8e8;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 12px 22px;
-      background: var(--gold);
-      color: #000;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .countdown {
-      font-size: 1.4em;
-      margin-top: 12px;
-      color: #ffd;
-    }
-
-    @media (max-width: 768px) {
-      .brush-title { font-size: 2.4rem; }
-      .main-name { font-size: 3rem; }
-      .overlay { background: rgba(0,0,0,.6); }
-    }
   </style>
 </head>
-<body>
+<body>  <div class="overlay">
+    <h2>Mis quince años</h2>
+    <h1>Dana Camila</h1><p>Te invito a celebrar este momento tan especial</p>
 
-  <!-- PORTADA / HERO -->
-  <section class="hero" aria-label="Portada de la invitación">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h2 class="brush-title">Mis <span style="color:var(--gold);">15</span> Años</h2>
-      <h1 class="main-name">DANNA CAMILA</h1>
-      <p class="sub-name">BARRERA AVILA</p>
-    </div>
-  </section>
+<div class="ubicacion">
+  📍 Centro Cultural Casa Clare<br>
+  Calle 63 Sur #80 - Boza
+</div>
 
-  <!-- CONTENIDO -->
-  <section class="card" aria-label="Detalles de la invitación">
-    <p>📅 1 de agosto de 2026</p>
-    <p>🕖 7:00 PM</p>
+<a href="#" class="btn">Confirmar asistencia</a>
 
-    <p style="margin-top:15px;">
-      Bajo una noche llena de estrellas, queremos celebrar esta fecha tan especial contigo.<br><br>
-      Tenemos el honor de invitarte a la celebración de los 15 años de<br>
-      <strong>DANNA CAMILA BARRERA AVILA</strong>
-    </p>
-
-    <p>
-      👗 Dress Code:<br>
-      Formal elegante (damas y caballeros)<br>
-      🚫 Evitar color azul oscuro
-    </p>
-
-    <p style="margin-top:20px; font-style:italic;">
-      ✨ Tu presencia hará esta noche aún más especial ✨
-    </p>
-
-    <div class="countdown" id="countdown"></div>
-
-    <a class="btn" href="https://wa.me/573223371728" target="_blank" rel="noopener">Confirmar asistencia</a>
-
-    <br><br>
-
-    <button class="btn" onclick="playMusic()">🎵 Activar música</button>
-
-    <audio id="music" loop>
-      <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
-    </audio>
-  </section>
-
-  <script>
-    // Contador hacia la fecha de la fiesta
-    const countDownDate = new Date("Aug 1, 2026 19:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-
-    const x = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML =
-        days + " días " + hours + "h " + minutes + "m " + seconds + "s ";
-
-      if (distance < 0) {
-        clearInterval(x);
-        countdownEl.innerHTML = "La fiesta ha comenzado";
-      }
-    }, 1000);
-
-    function playMusic() {
-      const audio = document.getElementById("music");
-      audio.play().catch(() => {
-        // Si no se puede reproducir automáticamente, pedir interacción
-        alert("Haz clic en el botón de reproducción para escuchar la música.");
-      });
-    }
-  </script>
-</body>
-</html>
+  </div></body>
+</html> 
