@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mis 15 Años - DANNA prueba CAMILA</title>
+<title>Mis 15 Años - DANNA CAMILA</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
@@ -17,7 +17,7 @@ body{
     overflow-x:hidden;
 
     /* 🎨 FONDO VAN GOGH REAL */
-    background: url('https://www.istockphoto.com/es/foto/lanzarote-de-noche-cielo-v%C3%ADa-l%C3%A1ctea-gm653506436-118832755') no-repeat center center/cover;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Starry_Night.JPG') no-repeat center center/cover;
 }
 
 /* capa oscura elegante */
@@ -66,6 +66,32 @@ h1{
     font-size:50px;
     color:gold;
     margin-top:50px;
+}
+
+/* 🎨 efecto pincel */
+.nombre{
+    font-size:48px;
+    font-weight:bold;
+    text-transform:uppercase;
+    display:inline-block;
+    overflow:hidden;
+    border-right:3px solid gold;
+    white-space:nowrap;
+    animation: escribir 4s steps(20), blink .7s infinite;
+}
+
+@keyframes escribir{
+    from{width:0}
+    to{width:100%}
+}
+
+@keyframes blink{
+    50%{border-color:transparent}
+}
+
+.sub{
+    letter-spacing:4px;
+    margin-top:10px;
 }
 
 /* 🎶 botón */
